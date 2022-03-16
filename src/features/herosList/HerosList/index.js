@@ -1,3 +1,9 @@
+import { Wrapper } from "./styled";
+
 export const HerosList = () => {
-  return <>HerosList</>;
+  return (
+    <>
+      <Wrapper>HerosList</Wrapper>
+    </>
+  );
 };
