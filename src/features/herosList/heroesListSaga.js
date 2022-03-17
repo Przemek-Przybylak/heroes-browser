@@ -10,7 +10,6 @@ function* fetchHeroesListHandler({payload: currentState }) {
 
     try {
         const list = yield call(fetchData,  currentState );
-        console.log(list)
         yield put(fetchListSuccess(list));
     } catch (error) {
         yield put(fetchListError("error"));
