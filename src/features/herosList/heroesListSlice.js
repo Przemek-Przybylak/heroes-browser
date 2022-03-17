@@ -3,15 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const ListSlice = createSlice({
     name: "heroes",
     initialState: {
-        heroes: [],
         status: "initial",
     },
     reducers: {
         fetchList: (state) => {
             state.status = "loading";
         },
-        fetchListSuccess: (state, { payload: list }) => {
-            state.heroes = list;
+        fetchListSuccess: (state,  payload) => {
+            state.heroes = payload;
             state.status = "success";
         },
         fetchListError: (state) => {
@@ -26,6 +25,6 @@ export const {
     fetchListError
 } = ListSlice.actions;
 
-export const selectHeroes = (state) => state.list.heroes
+export const selectHeroes = (state) => state
 
 export default ListSlice.reducer;

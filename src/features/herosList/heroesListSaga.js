@@ -1,14 +1,15 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { fetch } from "./fetch"
 import {
     fetchList,
     fetchListSuccess,
     fetchListError,
-} from "./heroListSlice";
+} from "./heroesListSlice";
+import {fetchData} from "../../common/fetchData";
 
-function* fetchHeroesListHandler() {
+function* fetchHeroesListHandler({payload: currentState }) {
+
     try {
-        const list = yield call(fetch);
+        const list = yield call(fetchData,  currentState );
         console.log(list)
         yield put(fetchListSuccess(list));
     } catch (error) {
@@ -17,5 +18,5 @@ function* fetchHeroesListHandler() {
 }
 
 export function* watchFetchHeroesList() {
-    yield takeLatest(fetchList.type, fetchHeroesListHandler)
+    yield takeLatest(fetchList.type, fetchHeroesListHandler);
 }
