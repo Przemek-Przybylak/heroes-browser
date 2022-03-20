@@ -4,13 +4,16 @@ const ListSlice = createSlice({
     name: "heroes",
     initialState: {
         status: "initial",
+        list: {
+            results: ""
+        }
     },
     reducers: {
         fetchList: (state) => {
             state.status = "loading";
         },
-        fetchListSuccess: (state,  payload) => {
-            state.heroes = payload;
+        fetchListSuccess: (state, {payload: list}) => {
+            state.list = list;
             state.status = "success";
         },
         fetchListError: (state) => {
@@ -25,6 +28,6 @@ export const {
     fetchListError
 } = ListSlice.actions;
 
-export const selectHeroes = (state) => state
+export const selectHeroesList = (state) => state.heroes.list.results
 
 export default ListSlice.reducer;
