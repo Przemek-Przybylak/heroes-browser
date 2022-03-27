@@ -2,7 +2,7 @@ import { Wrapper } from "./styled";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchList, selectHeroesList} from "./heroesListSlice";
 import {useEffect} from "react";
-import {Results} from "./Results";
+import {Tile} from "../../common/Tile";
 
 export const HerosList = () => {
     const dispatch = useDispatch();
@@ -17,7 +17,7 @@ export const HerosList = () => {
   return (
     <>
       <Wrapper>
-          <Results heroes={heroes} />
+          <Tile heroes={heroes}/>
       </Wrapper>
     </>
   );
