@@ -1,17 +1,16 @@
 import {Name, TileWrapper, Wrapper} from "./styled";
+import {StyledLink} from "../../GlobalStyles";
 
-export const Tile = ({heroes}) => {
-    console.log(heroes)
+export const Tile = ({ name, birth_year, eye_color, films, gender, height, homeworld, skin_color, starchips, vechicles }) => {
     return (
-        <>
         <Wrapper>
-            {heroes &&
-                heroes.map(({name}) => (
-                    <TileWrapper>
-                        <Name>{name}</Name>
-                    </TileWrapper>
-                ))}
+                     <TileWrapper>
+                         <Name>
+                             <StyledLink to={`heroes/${name}`}>
+                                 {name}
+                             </StyledLink>
+                         </Name>
+                     </TileWrapper>
         </Wrapper>
-    </>
     )
 }
