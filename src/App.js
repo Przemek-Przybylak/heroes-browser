@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <HashRouter>
           <Switch>
-              <Route path={"/heroes/:index"}>
+              <Route path={"/heroes/:name"}>
                   <Hero />
               </Route>
               <Route path={"/heroes"}>
