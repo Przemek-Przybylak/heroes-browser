@@ -10,6 +10,7 @@ export const HerosList = () => {
     const dispatch = useDispatch();
     const heroes = useSelector(selectHeroesList);
     const currentState = `people`;
+    console.log(heroes)
 
     useEffect(() => {
         dispatch(fetchList(currentState));
@@ -20,7 +21,7 @@ export const HerosList = () => {
     <>
       <Wrapper >
           {heroes &&
-              heroes.map(({name, birth_year, eye_color, films, gender, height, homeworld, skin_color, starchips, vechicles}) => (
+              heroes.map(({name, birth_year, eye_color, films, gender, height, homeworld, skin_color, starchips, vechicles, url}) => (
                   <>
                       <Tile
                           name={name}
@@ -33,6 +34,7 @@ export const HerosList = () => {
                           skin_color={skin_color}
                           starchips={starchips}
                           vechicles={vechicles}
+                          url={url}
                       />
                   </>
               ))}
