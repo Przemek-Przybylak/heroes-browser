@@ -34,7 +34,7 @@ export const HerosList = () => {
                           skin_color={skin_color}
                           starchips={starchips}
                           vechicles={vechicles}
-                          url={url}
+                          url={url.substr(22)}
                       />
                   </>
               ))}
