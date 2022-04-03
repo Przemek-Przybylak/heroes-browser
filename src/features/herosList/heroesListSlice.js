@@ -25,7 +25,7 @@ const ListSlice = createSlice({
 export const {
     fetchList,
     fetchListSuccess,
-    fetchListError
+    fetchListError,
 } = ListSlice.actions;
 
 export const selectHeroesList = (state) => state.heroes.list.results
