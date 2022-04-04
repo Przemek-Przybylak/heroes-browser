@@ -3,8 +3,6 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchList, selectHeroesList} from "./heroesListSlice";
 import {useEffect} from "react";
 import {Tile} from "../../common/Tile";
-import {Name, TileWrapper} from "../../common/Tile/styled";
-import {StyledLink} from "../../GlobalStyles";
 
 export const HerosList = () => {
     const dispatch = useDispatch();
@@ -34,7 +32,7 @@ export const HerosList = () => {
                           skin_color={skin_color}
                           starchips={starchips}
                           vechicles={vechicles}
-                          url={url.substr(22)}
+                          url={url.substr(29)}
                       />
                   </>
               ))}
