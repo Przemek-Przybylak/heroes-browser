@@ -1,13 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+    status: "initial",
+    list: {
+        results: ""
+    }
+}
+
 const ListSlice = createSlice({
     name: "heroes",
-    initialState: {
-        status: "initial",
-        list: {
-            results: ""
-        }
-    },
+    initialState,
+
     reducers: {
         fetchList: (state) => {
             state.status = "loading";
