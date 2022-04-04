@@ -8,6 +8,10 @@ export const GlobalStyles = createGlobalStyle`
     *, ::after, ::before {
         box-sizing: inherit;
     };
+    body{
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 `;
 
 export const StyledLink = styled(Link)`
