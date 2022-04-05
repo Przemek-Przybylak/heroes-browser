@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchList, selectHeroesList} from "./heroesListSlice";
 import {useEffect} from "react";
 import {Tile} from "../../common/Tile";
+import {Search} from "../../common/search/Search";
 
 export const HerosList = () => {
     const dispatch = useDispatch();
@@ -17,6 +18,7 @@ export const HerosList = () => {
 
   return (
     <>
+        <Search />
       <Wrapper >
           {heroes &&
               heroes.map(({name, birth_year, eye_color, films, gender, height, homeworld, skin_color, starchips, vechicles, url}) => (
