@@ -31,7 +31,8 @@ export const {
     fetchListError,
 } = ListSlice.actions;
 
-export const selectHeroesList = (state) => state.heroes.list.results
+export const selectHeroesList = (state) => state.heroes.list.results;
+export const selectStatus = (state) => state.heroes.status;
 export const selectHeroesByQuery = (state, query) => {
     const heroes = selectHeroesList(state);
     if (!query || query.trim() === "") {
