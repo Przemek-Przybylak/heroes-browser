@@ -1,5 +1,5 @@
 import {Name, Wrapper} from "./styled";
-import {StyledLink} from "../../../GlobalStyles";
+import {StyledLink} from "../../../core/GlobalStyles";
 
 export const Tile = ({name, url}) => {
     return (
