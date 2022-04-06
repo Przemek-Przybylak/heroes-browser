@@ -1,6 +1,6 @@
 import {Wrapper} from "./styled";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchList, selectHeroesByQuery, selectHeroesList, selectStatus} from "./heroesListSlice";
+import {fetchList, selectHeroesByQuery, selectStatus} from "./heroesListSlice";
 import {useEffect} from "react";
 import {Tile} from "./Tile";
 import {Search} from "./Search";
