@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/heros-browser/static/js/main.b96a05af.js",
+    "static/js/787.190de991.chunk.js": "/heros-browser/static/js/787.190de991.chunk.js",
+    "index.html": "/heros-browser/index.html",
+    "main.b96a05af.js.map": "/heros-browser/static/js/main.b96a05af.js.map",
+    "787.190de991.chunk.js.map": "/heros-browser/static/js/787.190de991.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.b96a05af.js"
+  ]
+}
