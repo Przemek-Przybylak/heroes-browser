@@ -27,5 +27,6 @@ export const {
 } = peopleSlice.actions;
 
 export const selectHero = (state) => state.hero.person;
+export const selectStatus = (state) => state.hero.status;
 
 export default peopleSlice.reducer;
