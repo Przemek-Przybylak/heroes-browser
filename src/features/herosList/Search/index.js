@@ -1,4 +1,4 @@
-import {useQueryParameter, useReplaceQueryParameter} from "../queryParameters";
+import {useQueryParameter, useReplaceQueryParameter} from "../../../common/queryParameters";
 import {Input, Wrapper} from "./styled";
 
 export const Search = () => {
@@ -6,20 +6,20 @@ export const Search = () => {
     const replaceQueryParameter = useReplaceQueryParameter();
     const placeholder = "Search for hero...";
 
-    const onInputChange = ({ target }) => {
+    const onInputChange = ({target}) => {
         replaceQueryParameter(
             {
                 key: "search",
                 value: target.value.trim() !== "" ? target.value : "",
-            }
+            },
         )
-    }
+    };
 
     return (
         <Wrapper>
             <Input placeholder={placeholder}
                    value={query || ""}
-                   onChange={onInputChange} />
+                   onChange={onInputChange}/>
         </Wrapper>
     )
-}
+};

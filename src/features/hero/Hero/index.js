@@ -39,4 +39,4 @@ export const Hero = () => {
             </Item>
         </Wrapper>
     )
-}
+};

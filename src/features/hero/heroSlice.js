@@ -1,11 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 const peopleSlice = createSlice({
     name: "hero",
     initialState: {
         status: "initial",
-        person: {
-        }
+        person: {}
     },
     reducers: {
         fetchHero: (state) => {
@@ -27,6 +26,6 @@ export const {
     fetchHeroError,
 } = peopleSlice.actions;
 
-export const selectHero = (state) => state.hero.person
+export const selectHero = (state) => state.hero.person;
 
 export default peopleSlice.reducer;

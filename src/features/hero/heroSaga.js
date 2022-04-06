@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from "redux-saga/effects";
+import {call, put, takeLatest} from "redux-saga/effects";
 import {
     fetchHero,
     fetchHeroSuccess,
@@ -6,9 +6,9 @@ import {
 } from "./heroSlice";
 import {fetchData} from "../../common/fetchData";
 
-function* fetchHeroHandler({ payload: currentState }) {
+function* fetchHeroHandler({payload: currentState}) {
     try {
-        const hero = yield call( fetchData, currentState );
+        const hero = yield call(fetchData, currentState);
         yield put(fetchHeroSuccess(hero));
     } catch (error) {
         yield put(fetchHeroError("error"));

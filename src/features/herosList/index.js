@@ -2,8 +2,8 @@ import {Wrapper} from "./styled";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchList, selectHeroesByQuery, selectHeroesList} from "./heroesListSlice";
 import {useEffect} from "react";
-import {Tile} from "../../common/Tile";
-import {Search} from "../../common/search/Search";
+import {Tile} from "./Tile";
+import {Search} from "./Search";
 import {useQueryParameter} from "../../common/queryParameters";
 
 export const HerosList = () => {
@@ -11,7 +11,6 @@ export const HerosList = () => {
     const currentState = `people`;
     const query = useQueryParameter("search")
     const heroes = useSelector(state => selectHeroesByQuery(state, query));
-    console.log(heroes)
 
     useEffect(() => {
         dispatch(fetchList(currentState));
