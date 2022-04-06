@@ -12,6 +12,8 @@ export const Item = styled.p`
   font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5%;
+  width: 400px;
+  letter-spacing: 1.5px;
 `;
