@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
     status: "initial",
@@ -32,5 +32,12 @@ export const {
 } = ListSlice.actions;
 
 export const selectHeroesList = (state) => state.heroes.list.results
+export const selectHeroesByQuery = (state, query) => {
+    const heroes = selectHeroesList(state);
+    if (!query || query.trim() === "") {
+        return heroes;
+    }
+    return heroes.filter(({name}) => name.toUpperCase().includes(query.trim().toUpperCase()));
+};
 
 export default ListSlice.reducer;
